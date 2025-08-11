@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Harsh Chauhan - Portfolio</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-dCST8cw2VqTR6AxW6aQYZLaF+qwZEtfjh+avEpIscUlZbwqxAaZcAohUGT6+SwpQbZCLQICpYHe7JKmyGEdjYQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* Custom CSS to override/supplement Tailwind where specific designs are needed */
+      body {
+        font-family: "Poppins", sans-serif;
+        /* background: #0d0b21;  */
+      }
+
+      .purple-section {
+        background: #5d2eea;
+        /* Custom clip-path for the angled section */
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
+      }
+
+      .section-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #fff;
+      }
+
+      .highlight {
+        color: #a78bfa;
+      }
+
+      .card {
+        background-color: #1f1b3a; /* Dark card background */
+      }
+
+      .card-title {
+        color: #a78bfa; /* Highlight color for card titles */
+      }
+
+      footer {
+        background: #1a1531;
+        text-align: center;
+        padding: 1rem;
+        color: #aaa;
+      }
+
+      .typewriter-text {
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: #a78bfa;
+        height: 2rem; /* Ensure height for typewriter effect */
+      }
+
+      /* Override Bootstrap specific styles or re-implement with Tailwind */
+      .navbar-brand img {
+        height: 40px;
+      }
+
+      .hero {
+        padding: 5rem 1rem;
+      }
+    </style>
+  </head>
+  <body class="bg-gradient-to-br from-purple-200 via-white to-purple-100">
+    <script>
+      function toggleAboutText() {
+        const text = document.getElementById("aboutText");
+        const btn = event.target;
+        if (text.style.maxHeight === "100px") {
+          text.style.maxHeight = "500px";
+          btn.textContent = "Read Less";
+        } else {
+          text.style.maxHeight = "100px";
+          btn.textContent = "Read More";
+        }
+      }
+
+      function toggleERP() {
+        const text = document.getElementById("erpText");
+        const button = event.target;
+        if (text.style.maxHeight === "100px") {
+          text.style.maxHeight = "1000px"; // Adjust height if needed
+          button.textContent = "Read Less";
+        } else {
+          text.style.maxHeight = "100px";
+          button.textContent = "Read More";
+        }
+      }
+
+      function toggleRecycling() {
+        const text = document.getElementById("Text2");
+        const button = event.target;
+        if (text.style.maxHeight === "100px") {
+          text.style.maxHeight = "1000px"; // Adjust height if needed
+          button.textContent = "Read Less";
+        } else {
+          text.style.maxHeight = "100px";
+          button.textContent = "Read More";
+        }
+      }
+
+      function toggleGrocery() {
+        const text = document.getElementById("Text3");
+        const button = event.target;
+        if (text.style.maxHeight === "100px") {
+          text.style.maxHeight = "1000px"; // Adjust height if needed
+          button.textContent = "Read Less";
+        } else {
+          text.style.maxHeight = "100px";
+          button.textContent = "Read More";
+        }
+      }
+
+      function toggleVA() {
+        const text = document.getElementById("Text4");
+        const button = event.target;
+        if (text.style.maxHeight === "100px") {
+          text.style.maxHeight = "1000px"; // Adjust height if needed
+          button.textContent = "Read Less";
+        } else {
+          text.style.maxHeight = "100px";
+          button.textContent = "Read More";
+        }
+      }
+      function toggleDataAnalytics() {
+        const text = document.getElementById("TextDataAnalytics");
+        const button = event.target;
+        if (text.style.maxHeight === "100px") {
+          text.style.maxHeight = "1000px"; // Adjust height if needed
+          button.textContent = "Read Less";
+        } else {
+          text.style.maxHeight = "100px";
+          button.textContent = "Read More";
+        }
+      }
+      function toggleWebDevelopmemntCourse() {
+        const text = document.getElementById("TextWebDev");
+        const button = event.target;
+        if (text.style.maxHeight === "100px") {
+          text.style.maxHeight = "1000px"; // Adjust height if needed
+          button.textContent = "Read Less";
+        } else {
+          text.style.maxHeight = "100px";
+          button.textContent = "Read More";
+        }
+      }
+      function toggleNationalHackathon() {
+        const text = document.getElementById("TextHackathon");
+        const button = event.target;
+        if (text.style.maxHeight === "100px") {
+          text.style.maxHeight = "1000px"; // Adjust height if needed
+          button.textContent = "Read Less";
+        } else {
+          text.style.maxHeight = "100px";
+          button.textContent = "Read More";
+        }
+      }
+      function toggleMern() {
+        const text = document.getElementById("TextMern");
+        const button = event.target;
+        if (text.style.maxHeight === "100px") {
+          text.style.maxHeight = "1000px"; // Adjust height if needed
+          button.textContent = "Read Less";
+        } else {
+          text.style.maxHeight = "100px";
+          button.textContent = "Read More";
+        }
+      }
+    </script>
+
+    <nav
+      class="bg-gradient-to-r from-[#0d0b21] via-[#2a0140] to-[#3a0d5f] p-4 flex justify-between items-center shadow-lg shadow-purple-900/30"
+    >
+      <a class="flex-shrink-0" href="#">
+        <img
+          src="assets/logo.png"
+          alt="Logo"
+          class="h-10 hover:scale-110 transition duration-300"
+        />
+      </a>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex space-x-6">
+        <a
+          class="text-white font-medium transition duration-300 hover:text-[#a78bfa] hover:none hover:underline-offset-4 hover:scale-105"
+          href="#"
+          >Home</a
+        >
+        <a
+          class="text-white font-medium transition duration-300 hover:text-[#a78bfa] hover:none hover:underline-offset-4 hover:scale-105"
+          href="#about"
+          >About</a
+        >
+        <a
+          class="text-white font-medium transition duration-300 hover:text-[#a78bfa] hover:none hover:underline-offset-4 hover:scale-105"
+          href="#services"
+          >Projects</a
+        >
+        <a
+          class="text-white font-medium transition duration-300 hover:text-[#a78bfa] hover:none hover:underline-offset-4 hover:scale-105"
+          href="#certifications"
+          >Certifications</a
+        >
+        <a
+          class="text-white font-medium transition duration-300 hover:text-[#a78bfa] hover:none hover:underline-offset-4 hover:scale-105"
+          href="#skills"
+          >Skills</a
+        >
+        <a
+          class="text-white font-medium transition duration-300 hover:text-[#a78bfa] hover:none hover:underline-offset-4 hover:scale-105"
+          href="#achievements"
+          >Achievements</a
+        >
+        <a
+          class="text-white font-medium transition duration-300 hover:text-pink-400 hover:none hover:underline-offset-4 hover:scale-105"
+          href="#contact"
+          >Contact</a
+        >
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button
+        class="md:hidden text-pink-400 hover:text-purple-300 transition duration-300 focus:outline-none"
+        onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"
+      >
+        <i class="fas fa-bars text-xl"></i>
+      </button>
+    </nav>
+
+    <div
+      id="mobile-menu"
+      class="hidden md:hidden bg-[#0d0b21] p-4 absolute w-full z-10"
+    >
+      <a class="block text-white py-2 hover:text-[#a78bfa]" href="#">Home</a>
+      <a class="block text-white py-2 hover:text-[#a78bfa]" href="#about"
+        >About</a
+      >
+      <a class="block text-white py-2 hover:text-[#a78bfa]" href="#services"
+        >Projects</a
+      >
+      <a
+        class="block text-white py-2 hover:text-[#a78bfa]"
+        href="#certifications"
+        >Certifications</a
+      >
+      <a class="block text-white py-2 hover:text-[#a78bfa]" href="#skills"
+        >Skills</a
+      >
+      <a class="block text-white py-2 hover:text-[#a78bfa]" href="#achievements"
+        >Achievements</a
+      >
+      <a class="block text-white py-2 hover:text-[#a78bfa]" href="#contact"
+        >Contact</a
+      >
+    </div>
+
+    <div
+      class="container mx-auto px-4 hero flex flex-col md:flex-row items-center justify-between"
+    >
+      <div class="md:w-1/2 text-center md:text-left mb-8 md:mb-0">
+        <h1 class="text-4xl lg:text-5xl font-bold text-white mb-4">
+          Hello, I am <span class="highlight">Harsh Chauhan</span>
+        </h1>
+        <p class="typewriter-text" id="typewriter"></p>
+        <p class="text-white text-lg mt-4">
+          I specialize in building scalable full stack web applications using
+          the <b class="text-[#a78bfa]">MERN stack</b>. With a passion for clean
+          <b class="text-[#a78bfa]">UI/UX</b>, optimized backend logic, and
+          seamless user experiences, I strive to deliver impactful solutions
+          that solve <b class="text-[#a78bfa]">real-world</b> problems.
+        </p>
+        <a
+          href="assets/My_Resume-1-1.pdf"
+          target="_blank"
+          class="inline-block mt-6 px-6 py-3 bg-[#7c3aed] text-white font-semibold rounded-lg hover:bg-[#6d28d9] transition duration-300"
+          style="background-color: #a855f7"
+          >View CV</a
+        >
+      </div>
+      <div class="md:w-1/2 text-center">
+        <img
+          src="assets/myimage1-removebg-preview.png"
+          alt="Harsh Chauhan"
+          class="mx-auto max-h-[400px] object-contain"
+          style="
+            -webkit-mask-image: linear-gradient(#000, rgba(0, 0, 0, 0));
+            mask-image: linear-gradient(#000, rgba(0, 0, 0, 0));
+          "
+        />
+      </div>
+    </div>
+
+    <section
+      id="about"
+      class="purple-section text-white py-10"
+      style="background-color: #c188f6"
+    >
+      <div
+        class="container mx-auto px-4 flex flex-col md:flex-row items-center"
+      >
+        <div class="md:w-1/2 text-center mb-8 md:mb-0">
+          <img
+            src="assets/myimage1-removebg-preview.png"
+            alt="About Me"
+            class="mx-auto max-h-[300px] object-contain"
+            style="
+              -webkit-mask-image: linear-gradient(#000, rgba(0, 0, 0, 0));
+              mask-image: linear-gradient(#000, rgba(0, 0, 0, 0));
+            "
+          />
+        </div>
+        <div class="md:w-1/2 text-center md:text-left">
+          <h2 class="section-title mb-4">
+            About <span class="highlight" style="color: #a855f7">Me</span>
+          </h2>
+          <p
+            id="aboutText"
+            class="text-base leading-relaxed overflow-hidden"
+            style="max-height: 100px; transition: max-height 0.5s ease"
+          >
+            I am Harsh Chauhan, a passionate
+            <b style="color: #a855f7">Full Stack Web Developer</b> with a strong
+            foundation in the <b style="color: #a855f7">MERN stack</b> (MongoDB,
+            Express.js, React.js, Node.js). I specialize in creating dynamic,
+            responsive, and user-centric web applications. With hands-on
+            experience in real-world projects and internships, I bring strong
+            problem-solving skills, a deep understanding of clean UI/UX
+            principles, and a commitment to continuous learning. My goal is to
+            build impactful digital experiences that solve real-world problems
+            and enhance user engagement.
+          </p>
+          <button
+            class="mt-4 px-6 py-3 border border-white text-white rounded-lg hover:bg-white hover:text-[#a855f7] transition duration-300"
+            onclick="toggleAboutText()"
+          >
+            Read More
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="services"
+      class="bg-gradient-to-br from-purple-200 via-white to-purple-100"
+    >
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-10 text-[#a78bfa] leading-tight">
+          My
+          <span class="text-white bg-purple-500 px-3 py-1 rounded-xl"
+            >Projects</span
+          >
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="card p-6 rounded-lg shadow-lg hover:bg-gray-50">
+            <h5 class="card-title text-2xl font-semibold mb-4">
+              College ERP System
+            </h5>
+            <img
+              src="assets/collegeERP.png"
+              alt="E-Recycle Screenshot"
+              class="w-full h-auto rounded-md mb-4"
+            />
+            <p
+              id="Text2"
+              class="text-white text-sm leading-relaxed overflow-hidden hover:text-black"
+              style="max-height: 100px; transition: max-height 0.5s ease-in-out"
+            >
+              I developed a comprehensive College ERP System tailored for
+              managing academic and administrative operations efficiently. The
+              system integrates key modules including: Student Management –
+              Automated student registration, course allocation, and academic
+              profiles. Fees Management – Secure online and offline payment
+              options with QR-based transactions, auto-generated receipts,
+              defaulter lists, and custom reports. Faculty & Admin Panels –
+              Role-based dashboards for teachers, accountants, and admins with
+              access control. Notification System – Real-time alerts via
+              WhatsApp and email for fees, exam updates, and attendance.
+              Analytics Dashboard – Interactive graphs, charts, and reports for
+              decision-making insights. Modern UI – Built using React.js,
+              Node.js, MongoDB, and styled with Tailwind CSS using a sleek dark
+              glassmorphism theme.
+            </p>
+            <button
+              class="mt-4 px-4 py-2 border border-white text-white rounded-lg hover:bg-white hover:text-[#1f1b3a] transition duration-300"
+              onclick="toggleRecycling()"
+            >
+              Read More
+            </button>
+          </div>
+
+          <div class="card p-6 rounded-lg shadow-lg hover:bg-gray-50">
+            <h5 class="card-title text-2xl font-semibold mb-4">E-Recycle</h5>
+            <img
+              src="assets/eRecycle.png"
+              alt="E-Recycle Screenshot"
+              class="w-full h-auto rounded-md mb-4"
+            />
+            <p
+              id="Text2"
+              class="text-white text-sm leading-relaxed overflow-hidden hover:text-black"
+              style="max-height: 100px; transition: max-height 0.5s ease-in-out"
+            >
+              Developed a web-based E-Recycle System that enables users to
+              register, list recyclable materials, and track collection
+              activities. The platform supports multiple material categories
+              including glass, copper, bronze, iron, and paper. It features
+              secure user authentication, an intuitive UI with Font Awesome
+              icons and Google Fonts, and a built-in payment gateway with QR
+              code-based online transactions and offline payment support.
+              JavaScript was used for frontend logic and validation, enhancing
+              overall user experience.
+            </p>
+            <button
+              class="mt-4 px-4 py-2 border border-white text-white rounded-lg hover:bg-white hover:text-[#1f1b3a] transition duration-300"
+              onclick="toggleRecycling()"
+            >
+              Read More
+            </button>
+          </div>
+
+          <div class="card p-6 rounded-lg shadow-lg hover:bg-gray-50">
+            <h5 class="card-title text-2xl font-semibold mb-4">E-commerce</h5>
+            <img
+              src="assets/GROCERY.png"
+              alt="E-commerce Screenshot"
+              class="w-full h-auto rounded-md mb-4"
+            />
+            <p
+              id="Text3"
+              class="text-white text-sm leading-relaxed overflow-hidden hover:text-black"
+              style="max-height: 100px; transition: max-height 0.5s ease-in-out"
+            >
+              Developed a fully functional online grocery delivery platform that
+              allows users to browse, search, and order daily essentials with
+              ease. The system supports user authentication, product
+              categorization, real-time cart updates, and order tracking.
+              Integrated a secure payment gateway for seamless transactions and
+              used MongoDB for dynamic data storage. Designed a responsive UI
+              using React.js and Bootstrap for an optimized user experience
+              across all devices.
+            </p>
+            <button
+              class="mt-4 px-4 py-2 border border-white text-white rounded-lg hover:bg-white hover:text-[#1f1b3a] transition duration-300"
+              onclick="toggleGrocery()"
+            >
+              Read More
+            </button>
+          </div>
+
+          <div
+            class="card p-6 rounded-lg shadow-lg hover:scale-105 hover:bg-gray-50"
+          >
+            <h5 class="card-title text-2xl font-semibold mb-4">
+              Virtual Assistant
+            </h5>
+            <img
+              src="assets/VA.png"
+              alt="Virtual Assistant Screenshot"
+              class="w-full h-auto rounded-md mb-4"
+            />
+            <p
+              id="Text4"
+              class="text-white text-sm leading-relaxed overflow-hidden hover:text-black"
+              style="max-height: 100px; transition: max-height 0.5s ease-in-out"
+            >
+              I developed an AI-powered Virtual Assistant capable of
+              understanding both voice and text commands. It performs tasks like
+              information retrieval, scheduling reminders, searching the web,
+              and basic conversation. Using NLP libraries like spaCy and speech
+              recognition, the assistant processes user input and responds
+              accordingly using real-time text-to-speech. This project enhanced
+              my understanding of human-computer interaction, natural language
+              understanding, and real-time API integration.
+            </p>
+            <button
+              class="mt-4 px-4 py-2 border border-white text-white rounded-lg hover:bg-white hover:text-[#1f1b3a] transition duration-300"
+              onclick="toggleVA()"
+            >
+              Read More
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="certifications" class="py-10 bg-gray-100">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-10 text-[#a78bfa] leading-tight">
+          My
+          <span class="text-white bg-purple-500 px-3 py-1 rounded-xl"
+            >Certifications</span
+          >
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div
+            class="group bg-white rounded-2xl shadow-lg p-6 transform transition-transform duration-300 hover:scale-105 hover:bg-purple-50"
+          >
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">
+              Intern - Data Analytics <b class="text-[#a78bfa]">@Pregrad</b>
+            </h3>
+
+            <p class="text-gray-600 text-sm text-[#aaa]">
+              <b class="font-normal"
+                >Worked on data cleaning, visualization, and generating
+                actionable insights using Excel and Python. Analyzed real-world
+                datasets to support decision-making and presented findings
+                through interactive dashboards.</b
+              >
+            </p>
+          </div>
+
+          <div
+            class="group bg-white rounded-2xl shadow-lg p-6 transform transition-transform duration-300 hover:scale-105 hover:bg-purple-50"
+          >
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">
+              Intern - Web Development Course
+              <b class="text-[#a78bfa]">@Internshala</b>
+            </h3>
+            <p class="text-gray-600 text-sm text-[#aaa]">
+              <b class="font-normal"
+                >Currently learning front-end and back-end web development
+                through Internshala. Building responsive websites using HTML,
+                CSS, JavaScript, and exploring backend technologies like Node.js
+                and MongoDB.</b
+              >
+            </p>
+          </div>
+
+          <div
+            class="group bg-white rounded-2xl shadow-lg p-6 transform transition-transform duration-300 hover:scale-105 hover:bg-purple-50"
+          >
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">
+              National Level Coding Hackathon
+              <b class="text-[#a78bfa]">@DBUU</b>
+            </h3>
+            <p class="text-gray-600 text-[#aaa]">
+              <b class="font-normal"
+                >Participated in a National Level Hackathon organized by Dev
+                Bhoomi Uttarakhand University (DBUU), where I collaborated with
+                a dynamic team to develop an innovative tech solution under
+                strict time constraints. Our project aimed to solve a real-world
+                problem using modern technologies such as HTML, CSS, JavaScript,
+                Python, and APIs, showcasing our problem-solving, coding, and
+                teamwork skills. I received a certificate of participation,
+                recognizing my contribution and active involvement in building
+                and presenting the prototype during the event.</b
+              >
+            </p>
+          </div>
+
+          <div
+            class="group bg-white rounded-2xl shadow-lg p-6 transform transition-transform duration-300 hover:scale-105 hover:bg-purple-50"
+          >
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">
+              Intern - MERN Stack Development
+              <b class="text-[#a78bfa]">@InternPro</b>
+            </h3>
+            <p class="text-gray-600 text-[#aaa]">
+              <b class="font-normal"
+                >Currently pursuing a hands-on internship at Internpro, focusing
+                on MERN Stack Development (MongoDB, Express.js, React.js,
+                Node.js). During this internship, I am working on building
+                scalable full-stack web applications from scratch using modern
+                development workflows.</b
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="py-10 bg-[#0d0b21]">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-4xl font-extrabold mb-10 text-[#a78bfa] tracking-wide">
+          Technical
+          <span class="text-white bg-purple-500 px-3 py-1 rounded-xl"
+            >Skills</span
+          >
+        </h2>
+
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto"
+        >
+          <div
+            class="group bg-white rounded-2xl shadow-lg p-6 transform transition-transform duration-300 hover:scale-105 hover:bg-purple-50"
+          >
+            <h3
+              class="text-2xl font-semibold text-purple-700 mb-4 flex items-center justify-center sm:justify-start"
+            >
+              <i class="fas fa-code mr-2 text-purple-500"></i>Frontend
+            </h3>
+            <ul class="list-disc list-inside text-gray-700 space-y-1 text-left">
+              <li
+                class="transition duration-200 group-hover:scale-105 hover:text-purple-600 hover:font-semibold"
+              >
+                HTML
+              </li>
+              <li
+                class="transition duration-200 group-hover:scale-105 hover:text-purple-600 hover:font-semibold"
+              >
+                CSS
+              </li>
+              <li
+                class="transition duration-200 group-hover:scale-105 hover:text-purple-600 hover:font-semibold"
+              >
+                JavaScript
+              </li>
+              <li
+                class="transition duration-200 group-hover:scale-105 hover:text-purple-600 hover:font-semibold"
+              >
+                React.js
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="group bg-white rounded-2xl shadow-lg p-6 transform transition-transform duration-300 hover:scale-105 hover:bg-purple-50"
+          >
+            <h3
+              class="text-2xl font-semibold text-purple-700 mb-4 flex items-center justify-center sm:justify-start"
+            >
+              <i class="fas fa-server mr-2 text-purple-500"></i>Backend
+            </h3>
+            <ul class="list-disc list-inside text-gray-700 space-y-1 text-left">
+              <li
+                class="transition duration-200 group-hover:scale-105 hover:text-purple-600 hover:font-semibold"
+              >
+                Node.js
+              </li>
+              <li
+                class="transition duration-200 group-hover:scale-105 hover:text-purple-600 hover:font-semibold"
+              >
+                Express.js
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="group bg-white rounded-2xl shadow-lg p-6 transform transition-transform duration-300 hover:scale-105 hover:bg-purple-50"
+          >
+            <h3
+              class="text-2xl font-semibold text-purple-700 mb-4 flex items-center justify-center sm:justify-start"
+            >
+              <i class="fas fa-database mr-2 text-purple-500"></i>Database
+            </h3>
+            <ul class="list-disc list-inside text-gray-700 space-y-1 text-left">
+              <li
+                class="transition duration-200 group-hover:scale-105 hover:text-purple-600 hover:font-semibold"
+              >
+                MongoDB
+              </li>
+              <li
+                class="transition duration-200 group-hover:scale-105 hover:text-purple-600 hover:font-semibold"
+              >
+                MySQL
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="group bg-white rounded-2xl shadow-lg p-6 transform transition-transform duration-300 hover:scale-105 hover:bg-purple-50"
+          >
+            <h3
+              class="text-2xl font-semibold text-purple-700 mb-4 flex items-center justify-center sm:justify-start"
+            >
+              <i class="fas fa-toolbox mr-2 text-purple-500"></i>Tools & Others
+            </h3>
+            <ul class="list-disc list-inside text-gray-700 space-y-1 text-left">
+              <li
+                class="transition duration-200 group-hover:scale-105 hover:text-purple-600 hover:font-semibold"
+              >
+                Git & GitHub
+              </li>
+              <li
+                class="transition duration-200 group-hover:scale-105 hover:text-purple-600 hover:font-semibold"
+              >
+                Bootstrap
+              </li>
+              <li
+                class="transition duration-200 group-hover:scale-105 hover:text-purple-600 hover:font-semibold"
+              >
+                Tailwind CSS
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="achievements"
+      class="py-12 bg-gradient-to-br from-[#27003d] via-[#1b002c] to-[#0d0b21] text-white"
+    >
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-4xl font-extrabold mb-10 text-purple-500 tracking-wide">
+          My
+          <span class="bg-purple-500 text-white px-3 py-1 rounded-xl"
+            >Achievements</span
+          >
+        </h2>
+
+        <ul class="space-y-6 max-w-3xl mx-auto">
+          <li
+            class="flex items-center justify-center bg-[#1a132b] hover:bg-pink-50 hover:text-black transition-all duration-300 px-6 py-4 rounded-xl shadow-lg group"
+          >
+            <i
+              class="fas fa-trophy text-pink-300 group-hover:rotate-12 group-hover:scale-125 duration-300 mr-3"
+            ></i>
+            <span class="text-lg font-medium"
+              >🏆 Winner - University Hackathon 2024</span
+            >
+          </li>
+
+          <li
+            class="flex items-center justify-center bg-[#1a132b] hover:bg-pink-50 hover:text-black transition-all duration-300 px-6 py-4 rounded-xl shadow-lg group"
+          >
+            <i
+              class="fas fa-scroll text-pink-300 group-hover:rotate-12 group-hover:scale-125 duration-300 mr-3"
+            ></i>
+            <span class="text-lg font-medium"
+              >📜 Built Flipkart Clone Website in 7 days</span
+            >
+          </li>
+
+          <li
+            class="flex items-center justify-center bg-[#1a132b] hover:bg-pink-50 hover:text-black transition-all duration-300 px-6 py-4 rounded-xl shadow-lg group"
+          >
+            <i
+              class="fas fa-microphone text-pink-300 group-hover:rotate-12 group-hover:scale-125 duration-300 mr-3"
+            ></i>
+            <span class="text-lg font-medium"
+              >🎤 Speaker at DBUU Tech Fest</span
+            >
+          </li>
+
+          <li
+            class="flex items-center justify-center bg-[#1a132b] hover:bg-pink-50 hover:text-black transition-all duration-300 px-6 py-4 rounded-xl shadow-lg group"
+          >
+            <i
+              class="fab fa-github text-pink-300 group-hover:rotate-12 group-hover:scale-125 duration-300 mr-3"
+            ></i>
+            <span class="text-lg font-medium"
+              >🌍 100+ GitHub contributions in 30 days</span
+            >
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section
+      class="py-16 bg-gradient-to-br from-[#2a0140] via-[#3a0d5f] to-[#1a002c] text-white"
+    >
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-4xl font-extrabold mb-10 tracking-wide text-pink-200">
+          Valuable
+          <span class="bg-purple-500 text-white px-3 py-1 rounded-xl"
+            >Testimonial</span
+          >
+        </h2>
+
+        <div
+          class="max-w-xl mx-auto bg-white/10 backdrop-blur-md rounded-2xl p-8 shadow-lg hover:shadow-purple-500/30 transition duration-300 hover:scale-105"
+        >
+          <img
+            src="https://i.pravatar.cc/100"
+            alt="Client"
+            class="rounded-full mx-auto w-24 h-24 object-cover border-4 border-pink-400 shadow-md mb-4"
+          />
+          <h5 class="text-2xl font-semibold mb-2 text-pink-300">
+            Jackson Levi
+          </h5>
+          <p class="text-base leading-relaxed text-purple-100">
+            “Harsh is not just a developer — he’s a visionary. His UI/UX design
+            instincts are unmatched.”
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="contact"
+      class="py-10 bg-[#0d0b21] hover:bg-[#1a133a] transition-all duration-500 group"
+    >
+      <div class="container mx-auto px-4">
+        <h2
+          class="section-title text-center mb-10 text-white transition duration-300 hover:text-[#a78bfa] hover:scale-105 hover:underline hover:underline-offset-4"
+        >
+          Contact
+          <span
+            class="highlight text-[#a78bfa] hover:text-pink-400 transition duration-300"
+            >Me!</span
+          >
+        </h2>
+
+        <form class="max-w-xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+          <input
+            type="text"
+            class="w-full p-3 rounded-lg bg-[#1f1b3a] text-white border border-gray-700 group-hover:border-[#a78bfa] focus:outline-none focus:ring-2 focus:ring-[#a78bfa] transition duration-300"
+            placeholder="Full Name"
+          />
+          <input
+            type="email"
+            class="w-full p-3 rounded-lg bg-[#1f1b3a] text-white border border-gray-700 group-hover:border-[#a78bfa] focus:outline-none focus:ring-2 focus:ring-[#a78bfa] transition duration-300"
+            placeholder="Email Address"
+          />
+          <input
+            type="text"
+            class="w-full p-3 rounded-lg bg-[#1f1b3a] text-white border border-gray-700 group-hover:border-[#a78bfa] focus:outline-none focus:ring-2 focus:ring-[#a78bfa] transition duration-300"
+            placeholder="Mobile Number"
+          />
+          <input
+            type="text"
+            class="w-full p-3 rounded-lg bg-[#1f1b3a] text-white border border-gray-700 group-hover:border-[#a78bfa] focus:outline-none focus:ring-2 focus:ring-[#a78bfa] transition duration-300"
+            placeholder="Email Subject"
+          />
+          <textarea
+            class="w-full p-3 rounded-lg bg-[#1f1b3a] text-white border border-gray-700 group-hover:border-[#a78bfa] focus:outline-none focus:ring-2 focus:ring-[#a78bfa] md:col-span-2 transition duration-300"
+            rows="4"
+            placeholder="Your Message"
+          ></textarea>
+          <div class="md:col-span-2 text-center">
+            <button
+              type="submit"
+              class="inline-block mt-4 px-8 py-3 bg-[#7c3aed] text-white font-semibold rounded-lg hover:bg-[#6d28d9] group-hover:scale-105 transition duration-300"
+            >
+              Send Message
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer class="bg-[#1a1531] text-[#aaa] py-4 text-center text-sm">
+      Copyright &copy; 2025 by Harsh Chauhan. All rights reserved.
+    </footer>
+
+    <script>
+      const roles = [
+        "Full Stack Web Developer",
+        "MERN Stack Developer",
+        "React.js Expert",
+        "Node.js Backend Developer",
+        "MongoDB Database Architect",
+        "UI/UX Enthusiast",
+        "REST API Developer",
+        "JavaScript Lover",
+        "Responsive Web Designer",
+        "Frontend Engineer",
+        "Backend Engineer",
+        "Clean Code Advocate",
+        "Tech Problem Solver",
+        "Next.js Developer",
+        "Passionate Coder",
+      ];
+
+      let index = 0;
+      let charIndex = 0;
+      const typingSpeed = 100;
+      const erasingSpeed = 50;
+      const delayBetween = 1500;
+      const element = document.getElementById("typewriter");
+
+      function type() {
+        if (charIndex < roles[index].length) {
+          element.textContent += roles[index].charAt(charIndex);
+          charIndex++;
+          setTimeout(type, typingSpeed);
+        } else {
+          setTimeout(erase, delayBetween);
+        }
+      }
+
+      function erase() {
+        if (charIndex > 0) {
+          element.textContent = roles[index].substring(0, charIndex - 1);
+          charIndex--;
+          setTimeout(erase, erasingSpeed);
+        } else {
+          index++;
+          if (index >= roles.length) index = 0;
+          setTimeout(type, typingSpeed);
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        setTimeout(type, delayBetween);
+      });
+    </script>
+  </body>
+</html>
